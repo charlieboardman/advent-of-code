@@ -84,4 +84,19 @@ def hands_sort(hand_group):
         n += 1
         
         
-hands_sort(B_hands) 
+hands_sort(A_hands)
+hands_sort(B_hands)
+hands_sort(C_hands)
+hands_sort(D_hands)
+hands_sort(E_hands)
+hands_sort(F_hands)
+hands_sort(G_hands)
+
+hands_sorted = G_hands + F_hands + E_hands + D_hands + C_hands + B_hands + A_hands
+
+winnings = 0
+
+for rank,hand in enumerate(hands_sorted):
+    winnings += (rank+1) * hand[1]
+    
+print(winnings)
