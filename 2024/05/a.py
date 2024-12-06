@@ -1,5 +1,5 @@
-rules = [(int(line.split('|')[0]),int(line.split('|')[1])) for line in open('input') if '|' in line]
-updates = [[int(x) for x in line.split(',')] for line in open('input') if ',' in line]
+rules = [(int(line.split('|')[0]),int(line.split('|')[1])) for line in open('testinput') if '|' in line]
+updates = [[int(x) for x in line.split(',')] for line in open('testinput') if ',' in line]
 
 correct_updates = [x for x in updates] #We will remove the bad ones from this list. List construction so as not to share memory address
 for update in updates:
