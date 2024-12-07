@@ -29,12 +29,16 @@ while 0 <= i < len(labmap) and 0 <= j < len(labmap[0]):
             i = i-1
             continue
     if d == '>':
+        if j+1 == len(labmap[0]):
+            continue
         if labmap[i][j+1] == '#':
             d = 'v'
             continue
         else:
             j = j+1
     if d == 'v':
+        if i+1 == len(labmap):
+            continue
         if labmap[i+1][j] == '#':
             d = '<'
             continue
