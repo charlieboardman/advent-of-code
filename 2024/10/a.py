@@ -61,8 +61,6 @@ while level_search >= 0:
                 new_nodes.append({'i':i,'j':j_left,'lvl':level_search,'IDs':deepcopy(IDs)})
     level_search -= 1
     
-    
-    
 for node in new_nodes:
     node['IDs'] = list(set(node['IDs']))
 
