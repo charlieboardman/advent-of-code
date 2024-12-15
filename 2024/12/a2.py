@@ -3,7 +3,7 @@ from functools import cache
 from copy import deepcopy
 import numpy as np
 
-plantmap = np.array([[plant for plant in row.strip('\n')] for row in open('testinput')])
+plantmap = [[plant for plant in row.strip('\n')] for row in open('testinput')]
 
 regions = [[None for x in row] for row in plantmap]
 visited = [[False for x in row] for row in plantmap]
@@ -17,7 +17,7 @@ j_max = len(plantmap[0])
 def lookup_plant(i,j):
     return plantmap[i][j]
 
-@cache #Only start using this after regions have been assigned
+#@cache #Only start using this after regions have been assigned
 def lookup_region(i,j):
     return regions[i][j]
 

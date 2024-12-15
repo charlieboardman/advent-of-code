@@ -2,7 +2,7 @@ from functools import cache
 from copy import deepcopy
 import numpy as np
 
-plantmap = np.array([[plant for plant in row.strip('\n')] for row in open('input')])
+plantmap = np.array([[plant for plant in row.strip('\n')] for row in open('testinput')])
 
 regions = [[None for x in row] for row in plantmap]
 visited = [[False for x in row] for row in plantmap]
